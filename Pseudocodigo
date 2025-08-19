@@ -8,7 +8,7 @@
   SE SIM
     Perguntar: “Verificou se está acontecendo alagamentos no caminho?”
       SE NÃO
-      MOSTRAR: "Recomendado verificar a intensidade da chuva e alagamentos para decidir melhor rota.” 
+      MOSTRAR: "Recomendado verificar a intensidade da chuva e alagamentos para decidir melhor rota”. 
       EXECUTAR AÇÃO: Decidir melhor rota.
       EXECUTE: Passo “3”.
   SE NÃO
