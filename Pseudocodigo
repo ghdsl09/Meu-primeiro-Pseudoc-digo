@@ -1,0 +1,55 @@
+1. PERGUNTAR: “Preciso sair de casa?”
+  SE NÃO
+    Permaneça em casa. 
+    EXECUTE: Passo “13”.
+  SE SIM
+	EXECUTE: Passo ”2”.
+2. PERGUNTAR: “Está chovendo?”
+  SE SIM
+    Perguntar: “Verificou se está acontecendo alagamentos no caminho?”
+      SE NÃO
+      MOSTRAR: "Recomendado verificar a intensidade da chuva e alagamentos para decidir melhor rota.” 
+      EXECUTAR AÇÃO: Decidir melhor rota.
+      EXECUTE: Passo “3”.
+  SE NÃO
+  	EXECUTAR AÇÃO: Decidir melhor rota.
+		EXECUTE: Passo “3”.
+3. PERGUNTAR: “Preciso trocar de roupa?”
+  SE SIM
+    PERGUNTAR: “Tenho roupa limpa disponível?”
+      SE NÃO
+        Não há roupa limpa. Não posso sair. 
+        EXECUTE: Passo “13”.
+      SE SIM
+		    EXECUTAR AÇÃO: Trocar de roupas.
+		    EXECUTE: Passo “4”.
+  SE NÃO
+    EXECUTE: Passo “4”.
+4. PERGUNTAR: “A garagem está aberta?”
+  SE NÃO
+    EXECUTAR AÇÃO: Abrir a garagem.
+    EXECUTE: Passo “5”.
+	SE SIM
+    EXECUTE: Passo “5”.
+5. PERGUNTAR: “O carro tem combustível suficiente?”
+  SE NÃO
+    MOSTRAR: "O carro não possuí combustível suficiente. Obrigatório parar em posto de gasolina.”
+    EXECUTAR: Passo “6 ao 12”.
+    EXECUTAR AÇÃO: Ir a um posto de gasolina.
+    EXECUTAR: Passo”13”.
+	SE SIM
+    EXECUTAR:  Passo “6”.
+6. EXECUTAR AÇÃO: Pegar as chaves do carro. 
+7. PERGUNTAR: “As portas do carro estão destrancadas?”
+  SE NÃO
+    EXECUTAR AÇÃO: Destrancar as portas. 
+    EXECUTE: Passo “8”.
+	SE SIM
+		EXECUTE: Passo “8”.
+8. EXECUTAR AÇÃO: Entrar no carro. 
+9. EXECUTAR AÇÃO: Ajustar o banco e os retrovisores. 
+10. EXECUTAR AÇÃO: Colocar o cinto de segurança. 
+11. EXECUTAR AÇÃO: Ligar o carro. 
+11. EXECUTAR AÇÃO: Ligar o som do carro. 
+12. MOSTRAR: Você está pronto para sair de casa. 
+13. FIM
