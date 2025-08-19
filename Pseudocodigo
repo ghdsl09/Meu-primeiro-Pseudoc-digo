@@ -29,7 +29,7 @@
   SE NÃO
     EXECUTAR AÇÃO: Abrir a garagem.
     EXECUTE: Passo “5”.
-	SE SIM
+  SE SIM
     EXECUTE: Passo “5”.
 5. PERGUNTAR: “O carro tem combustível suficiente?”
   SE NÃO
