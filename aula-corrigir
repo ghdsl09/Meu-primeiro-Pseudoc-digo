@@ -1,0 +1,23 @@
+const readline = require('readline')
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: pprocess.stdout
+});
+
+
+function pergunta(questão) {
+    return new promise ((resolve) => {
+        rl.question(questao, (resposta) => {
+            resolve(resposta);
+        })
+    })
+}
+
+async function perguntarNome() {
+    const primeironome = await pergunta("Qual seu primeiro nome?")
+    const ultimonome = await pergunta("Qual o seu último nome?")
+
+    console.log('Olá, ${primeironome} ${ultimonome}');
+    
+}
